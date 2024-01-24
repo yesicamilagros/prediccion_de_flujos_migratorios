@@ -5,3 +5,4 @@ el objetivo de este proyecto es realizar una simulacion de prediccion del fenome
 asi tambien tenemos adjuntado un video , portal web y un dashboard de la misma.
 
 
+[link de deploy](http://agrostopo.pythonanywhere.com/)
