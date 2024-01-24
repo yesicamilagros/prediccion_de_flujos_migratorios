@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+  <style>
+    .column {
+       float: left;
+       
+       width: 33.33%;
+       padding: 10px;
+       box-sizing: border-box;
+    }
+    .row::after {
+       content: "";
+       clear: both;
+       display: table;
+    }
+
+ </style>
+</head>
+
+<body>
+  <nav class="blue darken-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Latam TIC</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center light-blue-text">flujos migratorios </h1>
+      <div class="row center">
+        <h5 class="header col s12 light">predecir la probabilidad de flujos migratorios
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b>PIB</b></label>
+            <br>
+          <input   id="first_name" name='rooms'type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>indice de gini </b></label>
+            <br>
+          <input id="last_name"  name="distance" type="text" class="validate">
+
+        </div>
+
+      
+
+      </div>
+
+    
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light blue darken-4">prediciendo la probabilidad</button>
+      </div>
+    </form>
+      </div>
+
+       <br><h4 align="center"<b>{{pred}}</b></h4>
+        <br>
+
+    </div>
+    
+   
+
+
+  </div>
+  
+   <!--   ................   -->
+
+
+   <div class="row">
+    <div class="column">
+       <h4>dashboard</h4>
+       <embed src="https://app.powerbi.com/view?r=eyJrIjoiYzJhYzM5ODctY2M4YS00ODBlLThiNWEtNTZkNDM5OTA3MTk0IiwidCI6IjFmODEwNTkyLTJiMTAtNGQyZi05ZDFkLWNhMzFiMjY5MTVkZSIsImMiOjR9" style="width:400px; height: 300px;">
+    </div>
+    <div class="column">
+       <h4>video</h4>
+       <embed src="https://www.youtube.com/embed/E_MWiRnSyIE?playlist=E_MWiRnSyIE&loop=1" style="width:400px; height: 300px;">
+    </div>
+    <div class="column">
+      <h4>github</h4>
+      <embed src="https://proyecto-flujos-migratorios-r.onrender.com/" style="width:380px; height: 300px;">
+   </div>
+ </div>
+
+      
+    
+
+
+ <!--   ----------------------  -->
+
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Mision y Vision</h5>
+
+            <p class="light"> Nuestra Misión: Generar conocimiento basado en datos que empodere a las organizaciones y gobiernos para tomar decisiones informadas y efectivas.
+                             Nuestra Visión: Ser un referente global</p>
+          </div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiYzJhYzM5ODctY2M4YS00ODBlLThiNWEtNTZkNDM5OTA3MTk0IiwidCI6IjFmODEwNTkyLTJiMTAtNGQyZi05ZDFkLWNhMzFiMjY5MTVkZSIsImMiOjR9">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Check
+               <i class="material-icons right">send</i>
+              </button>
+            </a>
+        </div>
+       
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Dashboard</h5>
+
+            <p class="light">interactivo con los KPIs asociadas , importante para el análisis y obtención de información relevante ,para medir tendencias y eficacia de estrategias planteadas y/o posterior toma de decisiones</p>
+          </div>
+            <a href="/crime"> <button class="btn waves-effect waves-light"  name="">
+    <i class="material-icons right">Predict Crime</i><button></a>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Aplicacion ML</h5>
+
+            <p class="light">Nuestros usuarios pueden acceder a la apps ingresando parámetros de un país, obteniendo como resultado la probabilidad de que la emigración o inmigración sea alta o baja.</p>
+          </div>
+        </div>
+
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+              </button>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+  </div>>
+
+  <footer class="page-footer blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Latam TIC</h5>
+          <p class="grey-text text-lighten-4">Somos un equipo de estudiantes universitarios que trabajamos en este proyecto como si fuera nuestro trabajo de tiempo completo. Cualquier cantidad ayudaría a apoyar y continuar el desarrollo de este proyecto y es muy apreciada.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
