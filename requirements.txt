@@ -19,7 +19,6 @@ requests
 scikit-learn
 scipy
 six
-sklearn
 threadpoolctl
 tzdata
 urllib3
